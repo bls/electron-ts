@@ -9,13 +9,17 @@ Build Environment
 * Typescript target is ES6; can use the ES6 features of node.js 5.1.1.
 * Tests are using mocha (https://mochajs.org/)
 
-
 Setup
 =====
 
-Install tsd: npm install -g tsd
-Install typescript: npm install -g typescript@1.7.5
-Install grunt-cli: npm install -g grunt-cli
+Install grunt-cli: `npm install -g grunt-cli`
+
+Commands
+========
+
+* Compile: `npm run build`
+* Run: `npm start`
+* Test: `npm test`
 
 Notes
 =====
