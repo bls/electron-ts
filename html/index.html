@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Electron Boilerplate</title>
+    <!-- See: https://github.com/electronjs/electron-compile/issues/24 -->
+    <!-- This is basically how you can pull a TypeScript module into the page -->
+    <script type="text/javascript">
+        require('../dist/app');
+    </script>
+</head>
+<body>
+
+<div class="heading">
+    Demo time!
+</div>
+
+<button id="cmd" type="button">Run a command!</button>
+<button id="clear" type="button">Clear</button>
+
+<br/>
+
+<textarea id="output"></textarea>
+
+</body>
+</html>
