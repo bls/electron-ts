@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('You clicked the button!');
         console.log(process.cwd());
         console.log(appDir);
-        let result = await runCommand('ls -l /bin');
+        let result = await runCommand('echo Smile!!! It\'s working!!! :D');
         outputArea.value = result.stdout.toString('utf8');
     });
 
