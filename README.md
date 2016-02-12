@@ -14,6 +14,12 @@ Setup
 
 Install grunt-cli: `npm install -g grunt-cli`
 
+
+For Windows Users:
+Install typescript: `npm install -g typescript`
+Then go to the Fruntfile.js file and remove the options key (path: grunt.initConfig => ts => options). The whole line should be removed.
+
+
 Commands
 ========
 

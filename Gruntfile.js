@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 
         ts: {
             default: { tsconfig: true },
-            options: { compiler: './node_modules/.bin/tsc' }
+			options: { compiler: './node_modules/.bin/tsc' }
         },
 
         copy: {
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
                 }]
             },
             json: {
-                src: 'src/package.json',
+                src: 'package.json',
                 dest: 'dist/package.json'
             }
         },
@@ -46,13 +46,23 @@ module.exports = function(grunt) {
                     platform: 'darwin',
                     arch: 'x64'
                 }
-            }
+            },
+			winBuild: {
+                options: {
+                    name: 'BuiltApp',
+                    dir: 'dist/',
+                    out: '.',
+                    version: '0.36.7',
+                    platform: 'win32',
+                    arch: 'x64'
+                }				
+			}
         }
 
     });
 
     grunt.registerTask('default', ['compile']);
-    grunt.registerTask('compile', ['ts', 'tslint']);
-    grunt.registerTask('package', ['copy', 'electron']);
+    grunt.registerTask('compile', ['ts', 'tslint', 'copy']);
+    grunt.registerTask('package', ['compile', 'electron']);
 };
 
